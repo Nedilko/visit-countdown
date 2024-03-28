@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {  Paper, Stack, Typography } from "@mui/material";
+import Countdown from "./Countdown.tsx";
+import Progress from "./Progress.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const tripDate = new Date('2024-03-29T17:50:00');
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Paper id="pap" sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 2,
+      minHeight: '100vh',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}>
+      <Stack sx={{
+  alignItems: 'center',
+        mt: -20
+      }}>
+        <Typography variant="h4" color="text.primary" align="center">
+          До відʼїзду поїзда залишилося:
+        </Typography>
+        <Countdown tripDate={tripDate}/>
+        <Progress tripDate={tripDate}/>
+      </Stack>
+    </Paper>
   )
 }
 
