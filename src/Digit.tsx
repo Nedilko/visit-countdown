@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 
 type TDigitProps = {
   value: number | undefined;
@@ -22,4 +22,4 @@ const Digit: React.FC<TDigitProps> = ({ value, label }) => {
   );
 }
 
-export default Digit;
+export default memo(Digit);

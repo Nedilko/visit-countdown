@@ -15,6 +15,15 @@ const theme = createTheme({
       main: red.A400,
     },
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        html {
+          position: fixed;
+        }
+      `,
+    }
+  }
 });
 
 export default theme;

@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 
 type TDividerProps = {
   divider: string;
@@ -17,4 +17,4 @@ const Divider: React.FC<TDividerProps> = ({ divider }) => {
   );
 }
 
-export default Divider;
+export default memo(Divider);

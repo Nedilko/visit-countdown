@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Duration, intervalToDuration } from 'date-fns';
-import Divider from "./assets/Divider.tsx";
+import Divider from "./Divider.tsx";
 import Digit from "./Digit.tsx";
 
 interface CountdownProps {
@@ -45,4 +45,4 @@ const Countdown: React.FC<CountdownProps> = ({ tripDate }) => {
   );
 };
 
-export default Countdown;
+export default memo(Countdown);

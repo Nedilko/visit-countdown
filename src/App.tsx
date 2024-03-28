@@ -1,4 +1,4 @@
-import {  Paper, Stack, Typography } from "@mui/material";
+import { Paper, Stack, Typography } from "@mui/material";
 import Countdown from "./Countdown.tsx";
 import Progress from "./Progress.tsx";
 
@@ -11,11 +11,13 @@ function App() {
       flexDirection: 'column',
       gap: 2,
       minHeight: '100vh',
+      width: '100%',
       alignItems: 'center',
       justifyContent: 'center',
+      position: 'fixed',
     }}>
       <Stack sx={{
-  alignItems: 'center',
+        alignItems: 'center',
         mt: -20
       }}>
         <Typography variant="h4" color="text.primary" align="center">
